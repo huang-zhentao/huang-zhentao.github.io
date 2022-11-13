@@ -2,20 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://patrick-hwang.github.io/2022/06/03/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0.html</loc>
-    
-    <lastmod>2022-06-03T12:13:25.779Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://patrick-hwang.github.io/2022/06/03/hello-world.html</loc>
-    
-    <lastmod>2022-06-03T12:06:29.034Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://patrick-hwang.github.io/about/index.html</loc>
     
     <lastmod>2021-11-18T17:05:35.531Z</lastmod>
@@ -250,13 +236,6 @@
     <loc>https://patrick-hwang.github.io/2019/06/12/hexo%E5%8D%9A%E5%AE%A2%E6%8A%A5%E9%94%99%E5%90%88%E9%9B%86.html</loc>
     
     <lastmod>2020-02-18T06:43:24.855Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://patrick-hwang.github.io/LINUX%E5%91%BD%E4%BB%A4/index.html</loc>
-    
-    <lastmod>2019-11-23T12:44:11.197Z</lastmod>
     
   </url>
   
