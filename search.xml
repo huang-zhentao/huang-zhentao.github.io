@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[C语言关键字volatile的作用]]></title>
+    <title><![CDATA[C语言关键字——嵌入式开发]]></title>
     <url>%2F2020%2F06%2F07%2F%E7%AC%94%E8%AE%B0-C%E8%AF%AD%E8%A8%80%E5%85%B3%E9%94%AE%E5%AD%97volatile%E7%9A%84%E4%BD%9C%E7%94%A8.html</url>
-    <content type="text"><![CDATA[写在前面 C语言关键字volatile的作用，总结，笔记 前两天面试的时候被问到C语言关键字volatile的作用，一时答不上来，这个关键字以前有在程序中见到过，有印象但是不深刻，在日常的单片机程序开发中也很少使用到。 然后上网查了下，发现有人和我一样的经历 “我在网上看见一个帖子说回答不出这个问题的人是不会被雇佣的。这是区分C程序员和嵌入式系统程序员的最基本的问题。” volatile关键字用于声明那些可能会有意想不到的改变的变量，这个变量可能会被意想不到的改变。由于访问寄存器中数据比访问内存中的数据速度快，因此编译器一般会优化而减少访问内存，如果变量改变则数据会出错，所以使用volatile声明变量，则编译器每次都重新从内存读取变量数据，而不是使用保存在寄存器里的备份。总的来说，我们不能确保寄存器中的数据一定不会改变，则需要使用volatile。 从如下的例子中来看： 1#define rURXH0 (*(volatile unsigned char *)0x50000024) //UART 0 Receive buffer 0x50000024是地址，如果没有将这个地址强行转换位volatile，那么我们在使用rURXH0时，可能直接从CPU的寄存器中读取数据。因为之前rURXH0被访问过，之前从内存中取出的rURXH0的值被保存在某个寄存器中，由于编译器优化的结果，会直接从寄存器中读取rURXH0的值，不去内存读取。使用volatile进行强行转换之后，执行结构每次读取数据都会去内存中读取而不是去寄存器中读取。 volatile关键字降低编译器的优化度，但是确保了程序的正确性。 参考文献 https://blog.csdn.net/yanbober/article/details/8275341]]></content>
+    <content type="text"><![CDATA[写在前面 本文归纳总结了在嵌入式软件开发过程中常使用到的几个C语言关键字，比如：volatile、const、static等。 1. volatile这个关键字可以说是区分C程序员和嵌入式程序员最基本的问题，因为volatile常被使用在操作芯片的内存。 volatile关键字用于声明那些可能会有意想不到的改变的变量，这个变量可能会被意想不到的改变。由于访问寄存器中数据比访问内存中的数据速度快，因此编译器一般会优化而减少访问内存，如果变量改变则数据会出错，所以使用volatile声明变量，则编译器每次都重新从内存读取变量数据，而不是使用保存在寄存器里的备份。总的来说，我们不能确保寄存器中的数据一定不会改变，则需要使用volatile。 从如下的例子中来看： 1#define rURXH0 (*(volatile unsigned char *)0x50000024) //UART 0 Receive buffer 0x50000024是地址，如果没有将这个地址强行转换位volatile，那么我们在使用rURXH0时，可能直接从CPU的寄存器中读取数据。因为之前rURXH0被访问过，之前从内存中取出的rURXH0的值被保存在某个寄存器中，由于编译器优化的结果，会直接从寄存器中读取rURXH0的值，不去内存读取。使用volatile进行强行转换之后，执行结构每次读取数据都会去内存中读取而不是去寄存器中读取。 总的来说，volatile关键字降低编译器的优化度，但是确保了程序的正确性。被volatile修饰的代码，编译器不对其进行优化，从而提供稳定的访问。对于volatile修饰的变量每次都是重新从内存读取数据，而不是从寄存器读取数据，相当于不进行优化。 2. static 限制函数在只能在本文件中使用，对其他源文件隐藏。 修饰的变量只进行一次初始化。 默认初始化为0，因为在静态数据区内存中所有字节默认为0x00。比如要把一个字符数组当成字符串来用，但是又觉得每次在字符数组末尾加\0太麻烦，可以把字符数组定义成静态的，就省去了麻烦，因为那里本来就是\0。如：static char str[10]; 3. const用来定义只读变量，被const定义的变量它的值是不允许改变的，意味着必须在定义的时候给它赋初值。可以写成： 123const int Max; //或者int const Max; const与指针 const与指针配合使用有两种作用，一是限制指针变量，二是限制指针变量指向的数据。 12345678910111213141516171819202122232425int * const p2; //const修饰的是指针变量/** 也就是指针变量本身的值不能修改，所以被const修饰的指针变量只能在定义的时候初始化，不能* 定义之后再赋值。如错误如下*//*******错误演示******/int * const p2;int main()&#123; int num[] = &#123;1, 2, 3&#125;; p2 = num; //错误，表达式必须是可以修改的左值，p2不可修改&#125;//下面两种方法都是可以的int const *p1;const int *p1;/** 限制指针变量指向的数据的意思是指针可以指向不同的变量，但是不能修改指针指向数据的值，如：*/const int *p1;int main()&#123; int num = 5; p1 = &amp;num; (*p1)++; //错误操作，（*p1）不可修改&#125; const也可以同时限制指针变量和指针变量指向的数据的值，如：const int * const p2; 这种写法使得指针变量和指针变量指向的值都不能修改。 const和函数形参 const常用在函数形参中，在C标准库中很多函数形参用const限制，防止在函数内部修改指针指向的数据。 const和非const类型的转换 1234567891011121314const int *p1;int main()&#123; int *p2; p2 = p1; //错误，不能将const int *类型的值赋给 int *类型的值&#125;//也就是说 const int * 和 int * 是不同的类型，不能将const int *类型的数据赋值给 int *//类型的数据。可以理解为提升权限是不行的，但是降低权限是可以的。如：int *p1;int main()&#123; const int *p2; p2 = p1; //合法操作，相当于降低权限&#125; const 和define const是普通变量定义，define是预编译指令，且处理阶段不一样，define在预处理阶段，const在编译运行阶段。 const定义的是变量，define定义的是常量。define定义的在编译之后就不存在了，不占用内存，因为它不是变量，系统只会给变量分配内存。但是const本质是一个变量。 const定义的对象有数据类型，而define定义的对象没有数据类型，所以编译器可以对前者进行类型安全检查，对后者就是机械的字符替换。 注意：如果定义数组的最大长度就不能用const了，因为它是一个变量，就应该用define。如： 12345const int MAX = 100;int main()&#123; int map[MAX]; //错误操作&#125; 4. ifndef &amp; define &amp; endif在头文件中，通常使用如下格式，目的是防止头文件的重复包含和编译。 5. extern用外部文件定义的变量。 6. typedef12345678910/*从typedef的名字可以看出，是类型重定义，即重定义 类型 */typedef int A; //用A代替inttypedef int *B;typedef struct lcd_operation C;typedef struct lcd_operation * D; //这里使用D替代类型 struct lcd *typedef int (*add_type)(int, int); /*使用函数指针初始化函数*/add_type f1;add_type f2; 更多typedef使用可以参考：C中typedef 函数指针的使用]]></content>
       <categories>
         <category>C语言</category>
       </categories>
@@ -102,8 +102,8 @@
         <category>云服务器</category>
       </categories>
       <tags>
-        <tag>linux</tag>
         <tag>云服务器</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
