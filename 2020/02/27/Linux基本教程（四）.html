@@ -2,13 +2,13 @@
 <html  lang="zh">
 <head>
     <meta charset="utf-8">
-<title>分类: C语言 - ztao&#39;s Blog</title>
+<title>Linux系统基本教程（四） - ztao&#39;s Blog</title>
 <meta charset="utf-8" />
 
 <meta name="generator" content="Hexo 3.9.0" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>分类: C语言 - ztao&#39;s Blog</title>
+<title>Linux系统基本教程（四） - ztao&#39;s Blog</title>
 
 <meta name="google-site-verification" content="67z1CXZ8AOhImIglgTwqAlneRCHTO6xRJo5NeafDAqw" />
 <script>
@@ -26,18 +26,22 @@
 })();
 </script>
 
-    <meta name="keywords" content="EE,嵌入式,集成电路">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ztao&#39;s Blog">
-<meta property="og:url" content="https://ztHwang.github.io/categories/C语言/index.html">
+    <meta name="description" content="写在前面 本部分介绍Linux系统下的分区">
+<meta name="keywords" content="categories-java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux系统基本教程（四）">
+<meta property="og:url" content="https://ztHwang.github.io/2020/02/27/Linux基本教程（四）.html">
 <meta property="og:site_name" content="ztao&#39;s Blog">
+<meta property="og:description" content="写在前面 本部分介绍Linux系统下的分区">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2023-03-04T09:21:50.316Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ztao&#39;s Blog">
+<meta name="twitter:title" content="Linux系统基本教程（四）">
+<meta name="twitter:description" content="写在前面 本部分介绍Linux系统下的分区">
 
 
 
-<link rel="alternative" href="/atom.xml" title="ztao&#39;s Blog" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="Linux系统基本教程（四）" type="application/atom+xml">
 
 
 
@@ -107,13 +111,13 @@
 <link rel="stylesheet" href="/live2d/waifu.css">
     <!-- <meta name="referrer" content="no-referrer" /> 解决图片过期问题-->
 </head>
-<body class="is-3-column">
+<body class="is-2-column">
     <nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="https://cdn.jsdelivr.net/gh/hztjiayou/img@master/panda.png" alt="ztao&#39;s Blog" height="28">
+                <img src="https://cdn.jsdelivr.net/gh/hztjiayou/img@master/panda.png" alt="Linux系统基本教程（四）" height="28">
             
             </a>
         </div>
@@ -150,6 +154,10 @@
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -163,73 +171,166 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/categories">分类</a></li>
-            
-            <li class="is-active"><a href="#" aria-current="page">C语言</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-
-    <div class="card">
+                <div class="column is-8-tablet is-9-desktop is-9-widescreen has-order-2 column-main"><div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
                 
-                <time class="level-item has-text-grey" datetime="2020-06-07T12:38:00.000Z">2020-06-07</time>
+                <time class="level-item has-text-grey" datetime="2020-02-27T06:25:16.000Z">2020-02-27</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/C语言/">C语言</a>
+                <a class="has-link-grey -link" href="/categories/linux/">linux</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    10 分钟 读完 (大约 1568 个字)
+                    5 分钟 读完 (大约 795 个字)
                 </span>
                 
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    1<span id="busuanzi_value_page_pv"></span> 次查看
+                </span>
                 
             </div>
         </div>
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/06/07/嵌入式开发中的C语言关键字.html">嵌入式开发中的C语言关键字</a>
+                Linux系统基本教程（四）
             
         </h1>
         <div class="content">
-            <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><blockquote>
-<p>本文归纳总结了在嵌入式软件开发过程中常使用到的几个C语言关键字，比如：volatile、const、static等。</p></blockquote>
+            <h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><blockquote>
+<p>本部分介绍Linux系统下的分区</p>
+<a id="more"></a>
+</blockquote>
+<h4 id="1-系统分区"><a href="#1-系统分区" class="headerlink" title="1.系统分区"></a>1.系统分区</h4><p>在windows下分区方法是：硬盘分区-格式化-分配盘符</p>
+<p>但是在linux下是：硬盘分区-格式化-分区设备文件名-挂载（分配盘符）</p>
+<p>其中设备文件名是固定的，是系统自动分配的。</p>
+<p><strong>总结</strong></p>
+<ul>
+<li><p>分区：把大硬盘分为小的逻辑分区</p>
+</li>
+<li><p>格式化：写入文件系统</p>
+</li>
+<li>分区设备文件名：给每个分区定义设备文件名</li>
+<li>挂载：给每个分区分配挂载点</li>
+</ul>
+<p><strong>通俗的来说就是</strong>：你有一块硬盘，你要把它装配到你的LINUX电脑上，对于一整块硬盘你往往会把它分区，类似于win分为C、D、E等，这样方便管理，这就是把你的硬盘分为小的逻辑分区。好区之后需要对其进行格式化，格式化的目的不是清空所有文件！而是写入文件系统。然后要做的是给每个分区定义设备文件名，如：sda、sdb等（sda、sdb代表的是这一整块硬盘的名字），同时分配逻辑分区名，如sda1、sda2等（这代表的是一块硬盘分为1、2两个分区，但是一块硬盘只能支持4个主分区，也就是sda1、2、3、4，<strong>如果你要分4个以上分区，linux就会增加一个扩展分区，在扩展分区中分第5个分区，也就是第1个逻辑分区</strong>）。接下来就是挂载，挂载之前要先了解linux的系统结构是树状的。</p>
+<p>其中<code>/</code>是整个系统的根目录，而<code>/boot</code>、<code>/etc</code>等是子目录，而<code>挂载</code>的意思就是把硬盘的某个分区挂到这些目录下，比如你可以把<code>/dev/sda3</code>挂载到<code>/</code>根目录下，那么你在<code>/</code>根目录下的文件就存储在<code>/dev/sda3</code>这个硬盘分区，同理你还可以把<code>/dev/sda1</code>挂载到<code>/boot</code>目录下，每一个目录都可以有自己独立的硬盘空间，这就是挂载。</p>
+<h4 id="2-安装linux系统时分区配置"><a href="#2-安装linux系统时分区配置" class="headerlink" title="2.安装linux系统时分区配置"></a>2.安装linux系统时分区配置</h4><p>在安装linux时候，必须要分配的分区有：</p>
+<ul>
+<li><code>/</code>根分区。</li>
+<li><code>swap分区</code>，交换分区，物理内存的两倍，不超过2GB。swap分区是在电脑物理内存不够用的时候，会使用swap交换内存，但是给其分配空间过大并没有多大的作用，反而还会占用硬盘空间，所以给其最多配置2GB。</li>
+</ul>
+<p>另外推荐分区：</p>
+<ul>
+<li><code>/boot</code>,启动分区，200MB。系统的启动需要一定额外的空间，如果不分配<code>/boot</code>分区，则启动所需要的空间就被包括在<code>/</code>根分区中，一点<code>/</code>的空间被使用完，那么系统就很有可能启动不了，所有往往要分一个<code>/boot</code>分区。</li>
+<li><code>/home</code>，存储用户数据。</li>
+</ul>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/06/07/嵌入式开发中的C语言关键字.html#more">阅读更多</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/linux/">linux</a>
                 </div>
             </div>
         </div>
         
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
         
     </div>
 </div>
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wechatpay.jpg" alt="微信"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/03/07/OV7725入门使用.html">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">OV7725入门使用</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/27/manjaro使用技巧.html">
+                <span class="level-item">manjaro使用技巧</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: true,
+        verify: false,
+        app_id: 'NXFUbBGEhbCBH8V94r8uOxpX-gzGzoHsz',
+        app_key: 'cBEVo6qylQrXl34Ks162qXe4',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+    });
+</script>
+
+    </div>
+</div>
 
 </div>
                 
@@ -237,7 +338,7 @@
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+<div class="column is-4-tablet is-3-desktop is-3-widescreen  has-order-1 column-left is-sticky">
     
         
 <div class="card widget">
@@ -309,6 +410,29 @@
 </div>
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#写在前面">
+        <span class="has-mr-6">1</span>
+        <span>写在前面</span>
+        </a></li><li>
+        <a class="is-flex" href="#1-系统分区">
+        <span class="has-mr-6">2</span>
+        <span>1.系统分区</span>
+        </a></li><li>
+        <a class="is-flex" href="#2-安装linux系统时分区配置">
+        <span class="has-mr-6">3</span>
+        <span>2.安装linux系统时分区配置</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 
@@ -362,17 +486,10 @@
 
     
     
-</div>
-
-                
-                
-
-
-
-
-<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
     
+        <div class="column-right-shadow  ">
         
+            
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
@@ -492,8 +609,8 @@
     </div>
 </div>
 
-    
-        <div class="card widget">
+        
+            <div class="card widget">
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
@@ -617,8 +734,8 @@
 </div>
 
 
-    
         
+            
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
@@ -628,6 +745,8 @@
     </div>
 </div>
 
+        
+        </div>
     
     
 </div>
@@ -642,7 +761,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="https://cdn.jsdelivr.net/gh/hztjiayou/img@master/panda.png" alt="ztao&#39;s Blog" height="28">
+                    <img src="https://cdn.jsdelivr.net/gh/hztjiayou/img@master/panda.png" alt="Linux系统基本教程（四）" height="28">
                 
                 </a>
                 <p class="is-size-7">

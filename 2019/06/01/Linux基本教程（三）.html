@@ -2,13 +2,13 @@
 <html  lang="zh">
 <head>
     <meta charset="utf-8">
-<title>分类: C语言 - ztao&#39;s Blog</title>
+<title>Linux基本教程（三） - ztao&#39;s Blog</title>
 <meta charset="utf-8" />
 
 <meta name="generator" content="Hexo 3.9.0" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>分类: C语言 - ztao&#39;s Blog</title>
+<title>Linux基本教程（三） - ztao&#39;s Blog</title>
 
 <meta name="google-site-verification" content="67z1CXZ8AOhImIglgTwqAlneRCHTO6xRJo5NeafDAqw" />
 <script>
@@ -26,18 +26,22 @@
 })();
 </script>
 
-    <meta name="keywords" content="EE,嵌入式,集成电路">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ztao&#39;s Blog">
-<meta property="og:url" content="https://ztHwang.github.io/categories/C语言/index.html">
+    <meta name="description" content="本部分介绍了：vim的常用操作">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux基本教程（三）">
+<meta property="og:url" content="https://ztHwang.github.io/2019/06/01/Linux基本教程（三）.html">
 <meta property="og:site_name" content="ztao&#39;s Blog">
+<meta property="og:description" content="本部分介绍了：vim的常用操作">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2023-03-04T09:03:04.876Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ztao&#39;s Blog">
+<meta name="twitter:title" content="Linux基本教程（三）">
+<meta name="twitter:description" content="本部分介绍了：vim的常用操作">
 
 
 
-<link rel="alternative" href="/atom.xml" title="ztao&#39;s Blog" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="Linux基本教程（三）" type="application/atom+xml">
 
 
 
@@ -107,13 +111,13 @@
 <link rel="stylesheet" href="/live2d/waifu.css">
     <!-- <meta name="referrer" content="no-referrer" /> 解决图片过期问题-->
 </head>
-<body class="is-3-column">
+<body class="is-2-column">
     <nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="https://cdn.jsdelivr.net/gh/hztjiayou/img@master/panda.png" alt="ztao&#39;s Blog" height="28">
+                <img src="https://cdn.jsdelivr.net/gh/hztjiayou/img@master/panda.png" alt="Linux基本教程（三）" height="28">
             
             </a>
         </div>
@@ -163,73 +167,161 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/categories">分类</a></li>
-            
-            <li class="is-active"><a href="#" aria-current="page">C语言</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-
-    <div class="card">
+                <div class="column is-8-tablet is-9-desktop is-9-widescreen has-order-2 column-main"><div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
                 
-                <time class="level-item has-text-grey" datetime="2020-06-07T12:38:00.000Z">2020-06-07</time>
+                <time class="level-item has-text-grey" datetime="2019-06-01T09:25:54.000Z">2019-06-01</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/C语言/">C语言</a>
+                <a class="has-link-grey -link" href="/categories/linux/">linux</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    10 分钟 读完 (大约 1568 个字)
+                    3 分钟 读完 (大约 452 个字)
                 </span>
                 
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    1<span id="busuanzi_value_page_pv"></span> 次查看
+                </span>
                 
             </div>
         </div>
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/06/07/嵌入式开发中的C语言关键字.html">嵌入式开发中的C语言关键字</a>
+                Linux基本教程（三）
             
         </h1>
         <div class="content">
-            <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><blockquote>
-<p>本文归纳总结了在嵌入式软件开发过程中常使用到的几个C语言关键字，比如：volatile、const、static等。</p></blockquote>
+            <blockquote>
+<p>本部分介绍了：vim的常用操作</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="1-vim-使用"><a href="#1-vim-使用" class="headerlink" title="1.vim 使用"></a>1.vim 使用</h3><p>vim分为三种基本模式</p>
+<ul>
+<li>命令行模式</li>
+<li>插入模式</li>
+<li>底行模式</li>
+</ul>
+<h4 id="1）vim的删除、插入、复制"><a href="#1）vim的删除、插入、复制" class="headerlink" title="1）vim的删除、插入、复制"></a>1）vim的删除、插入、复制</h4><p>删除：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x 	#删除光标所在的字符</span><br><span class="line">dd	#删除光标所在行</span><br><span class="line">s	#删除光标所在的字符，并进入输入模式</span><br><span class="line">S	#删除光标所在的行，并进入输入模式</span><br></pre></td></tr></table></figure>
+<p>修改：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">r 	#修改光标所在的字符，键入r之后直接键入待修改的字符</span><br><span class="line">R	#进入取代模式，可移动光标键入所指定的修改字符</span><br></pre></td></tr></table></figure>
+<p>复制：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yy	#复制光标所在的行</span><br><span class="line">nyy	#复制光标所在行向下n行</span><br></pre></td></tr></table></figure>
+<p>粘贴：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p #将缓冲区的字符粘贴到光标所在位置</span><br></pre></td></tr></table></figure>
+<h4 id="2）光标的移动"><a href="#2）光标的移动" class="headerlink" title="2）光标的移动"></a>2）光标的移动</h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">0	#移动光标到所在行的最前面</span><br><span class="line">$	#移动光标到所在行的最后面</span><br><span class="line">H	#光标移动到当前屏幕第一行第一列</span><br><span class="line">M	#光标移动到中间行第一列</span><br><span class="line">L	#光标移动到最后一行第一列</span><br><span class="line">b	#移动到上一个字的第一个字母</span><br><span class="line">w	#移动到下一个字的第一个字母</span><br><span class="line">e	#移动到下一个字的最后一个字母</span><br><span class="line">^	#移动到光标所在行的第一个非空白字符</span><br><span class="line">n-	#向上移动n行</span><br><span class="line">n+	#向下移动n行</span><br><span class="line">nG	#移动到第n行</span><br></pre></td></tr></table></figure>
+<h4 id="3）查找与替换"><a href="#3）查找与替换" class="headerlink" title="3）查找与替换"></a>3）查找与替换</h4><p>查找：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/&lt;要查找的字符&gt;	#向下查找字符</span><br><span class="line">？&lt;要查找的字符&gt;	#向上查找字符</span><br></pre></td></tr></table></figure>
+<p>替换：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">:0,$s/string1/string2/g	</span><br><span class="line"></span><br><span class="line">#0,$表示替换范围从第0行到最后一行</span><br><span class="line">#s表示转入替换模式</span><br><span class="line">#string1/string2表示把所有的string1替换为string2</span><br><span class="line">#g表示替换一行中所有的sting1，否则只替换第一个</span><br></pre></td></tr></table></figure>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/06/07/嵌入式开发中的C语言关键字.html#more">阅读更多</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/linux/">linux</a>
                 </div>
             </div>
         </div>
         
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
         
     </div>
 </div>
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wechatpay.jpg" alt="微信"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/06/CadenceVirtuoso设计二级放大器原理图及版图.html">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Cadence Virtuoso 设计二级放大器原理图及版图</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/05/30/Linux基本教程（二）.html">
+                <span class="level-item">Linux基本教程（二）</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: true,
+        verify: false,
+        app_id: 'NXFUbBGEhbCBH8V94r8uOxpX-gzGzoHsz',
+        app_key: 'cBEVo6qylQrXl34Ks162qXe4',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+    });
+</script>
+
+    </div>
+</div>
 
 </div>
                 
@@ -237,7 +329,7 @@
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+<div class="column is-4-tablet is-3-desktop is-3-widescreen  has-order-1 column-left is-sticky">
     
         
 <div class="card widget">
@@ -362,17 +454,10 @@
 
     
     
-</div>
-
-                
-                
-
-
-
-
-<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
     
+        <div class="column-right-shadow  ">
         
+            
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
@@ -492,8 +577,8 @@
     </div>
 </div>
 
-    
-        <div class="card widget">
+        
+            <div class="card widget">
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
@@ -617,8 +702,8 @@
 </div>
 
 
-    
         
+            
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
@@ -628,6 +713,8 @@
     </div>
 </div>
 
+        
+        </div>
     
     
 </div>
@@ -642,7 +729,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="https://cdn.jsdelivr.net/gh/hztjiayou/img@master/panda.png" alt="ztao&#39;s Blog" height="28">
+                    <img src="https://cdn.jsdelivr.net/gh/hztjiayou/img@master/panda.png" alt="Linux基本教程（三）" height="28">
                 
                 </a>
                 <p class="is-size-7">

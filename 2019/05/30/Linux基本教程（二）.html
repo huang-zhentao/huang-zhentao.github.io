@@ -2,13 +2,13 @@
 <html  lang="zh">
 <head>
     <meta charset="utf-8">
-<title>分类: C语言 - ztao&#39;s Blog</title>
+<title>Linux基本教程（二） - ztao&#39;s Blog</title>
 <meta charset="utf-8" />
 
 <meta name="generator" content="Hexo 3.9.0" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>分类: C语言 - ztao&#39;s Blog</title>
+<title>Linux基本教程（二） - ztao&#39;s Blog</title>
 
 <meta name="google-site-verification" content="67z1CXZ8AOhImIglgTwqAlneRCHTO6xRJo5NeafDAqw" />
 <script>
@@ -26,18 +26,25 @@
 })();
 </script>
 
-    <meta name="keywords" content="EE,嵌入式,集成电路">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ztao&#39;s Blog">
-<meta property="og:url" content="https://ztHwang.github.io/categories/C语言/index.html">
+    <meta name="description" content="本部分介绍了：U盘挂载、压缩命令、进程管理、网络管理、ftp、nfs、ssh等；">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux基本教程（二）">
+<meta property="og:url" content="https://ztHwang.github.io/2019/05/30/Linux基本教程（二）.html">
 <meta property="og:site_name" content="ztao&#39;s Blog">
+<meta property="og:description" content="本部分介绍了：U盘挂载、压缩命令、进程管理、网络管理、ftp、nfs、ssh等；">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://zthwang.github.io/assets/img/Linux磁盘结构.jpg">
+<meta property="og:image" content="https://zthwang.github.io/assets/img/linux管道.jpg">
+<meta property="og:updated_time" content="2023-03-04T09:01:53.363Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ztao&#39;s Blog">
+<meta name="twitter:title" content="Linux基本教程（二）">
+<meta name="twitter:description" content="本部分介绍了：U盘挂载、压缩命令、进程管理、网络管理、ftp、nfs、ssh等；">
+<meta name="twitter:image" content="https://zthwang.github.io/assets/img/Linux磁盘结构.jpg">
 
 
 
-<link rel="alternative" href="/atom.xml" title="ztao&#39;s Blog" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="Linux基本教程（二）" type="application/atom+xml">
 
 
 
@@ -107,13 +114,13 @@
 <link rel="stylesheet" href="/live2d/waifu.css">
     <!-- <meta name="referrer" content="no-referrer" /> 解决图片过期问题-->
 </head>
-<body class="is-3-column">
+<body class="is-2-column">
     <nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="https://cdn.jsdelivr.net/gh/hztjiayou/img@master/panda.png" alt="ztao&#39;s Blog" height="28">
+                <img src="https://cdn.jsdelivr.net/gh/hztjiayou/img@master/panda.png" alt="Linux基本教程（二）" height="28">
             
             </a>
         </div>
@@ -163,73 +170,312 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/categories">分类</a></li>
-            
-            <li class="is-active"><a href="#" aria-current="page">C语言</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-
-    <div class="card">
+                <div class="column is-8-tablet is-9-desktop is-9-widescreen has-order-2 column-main"><div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
                 
-                <time class="level-item has-text-grey" datetime="2020-06-07T12:38:00.000Z">2020-06-07</time>
+                <time class="level-item has-text-grey" datetime="2019-05-30T14:28:30.000Z">2019-05-30</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/C语言/">C语言</a>
+                <a class="has-link-grey -link" href="/categories/linux/">linux</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    10 分钟 读完 (大约 1568 个字)
+                    15 分钟 读完 (大约 2218 个字)
                 </span>
                 
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    1<span id="busuanzi_value_page_pv"></span> 次查看
+                </span>
                 
             </div>
         </div>
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/06/07/嵌入式开发中的C语言关键字.html">嵌入式开发中的C语言关键字</a>
+                Linux基本教程（二）
             
         </h1>
         <div class="content">
-            <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><blockquote>
-<p>本文归纳总结了在嵌入式软件开发过程中常使用到的几个C语言关键字，比如：volatile、const、static等。</p></blockquote>
+            <blockquote>
+<p>本部分介绍了：U盘挂载、压缩命令、进程管理、网络管理、ftp、nfs、ssh等；</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="1-U盘挂载和卸载"><a href="#1-U盘挂载和卸载" class="headerlink" title="1.U盘挂载和卸载"></a>1.U盘挂载和卸载</h3><p>首先了解linux系统下U盘默认是挂载在media目录下，如果默认没有挂载，手动挂载到mnt目录。</p>
+<p>1.挂载：sudo  mount   deviecename    /mnt<br>    执行上面这一步先要知道U盘在linux系统中的名字，使用命令：sudo  fdisk   -l</p>
+<p>2.卸载：sudo   umount   /mnt        (/mnt为挂载目录)</p>
+<p>3.扩展————Linux系统的磁盘结构</p>
+<p><img src="\assets\img\Linux磁盘结构.jpg" alt="Linux磁盘结构"></p>
+<h3 id="2-压缩包管理"><a href="#2-压缩包管理" class="headerlink" title="2.压缩包管理"></a>2.压缩包管理</h3><p>1.屌丝版</p>
+<ul>
+<li><p>gzip  文件            #压缩文件之后原文件删除，并且 使用 <code>gzip *.txt</code>压缩的所有txt文件，压缩后不会打包，是分别压缩；    解压缩: gunzip     *.gz</p>
+</li>
+<li><p>bzip2    文件        # 压缩文件之后源文件删除，加参数 -k 可保留，<code>bzip2  *.txt</code>压缩所有txt文件是分别压缩，不打包        解压缩：bunzip2   *.bz2</p>
+</li>
+</ul>
+<p>2.高富帅版</p>
+<ul>
+<li><h5 id="tar——如果不适用-z-j-参数，给命令只是对文件或者目录打包"><a href="#tar——如果不适用-z-j-参数，给命令只是对文件或者目录打包" class="headerlink" title="tar——如果不适用 z  j 参数，给命令只是对文件或者目录打包"></a>tar——如果不适用 z  j 参数，给命令只是对文件或者目录打包</h5><p>​    参数：</p>
+<p>​        c——创建——压缩</p>
+<p>​        x——释放——解压缩</p>
+<p>​        v——显示提示信息——可以省略</p>
+<p>​        f——指定压缩文件的名字</p>
+<p>​        </p>
+<p>​        z——使用gzip的方式压缩文件——.gz</p>
+<p>​        j——使用bzip2的方式压缩文件——.bz2</p>
+<p>​    压缩：</p>
+<p>​        tar zcvf  生成的压缩包的名字   要压缩的文件或者目录</p>
+<p>​        tar  jcvf  生成的压缩包的名字    要压缩的文件或者目录</p>
+<p>​    解压缩：</p>
+<p>​        tar     jxvf/zcvf   压缩包的名字    -C(解压到指定目录参数)    指定目录</p>
+</li>
+<li><h6 id="rar——-用户手动安装"><a href="#rar——-用户手动安装" class="headerlink" title="rar——   用户手动安装"></a>rar——   用户手动安装</h6><p>​    参数：</p>
+<p>​        压缩：a</p>
+<p>​        解压缩：x</p>
+<p>​    压缩：</p>
+<p>​        rar  a  生成的压缩文件名字（不需要带后缀）    压缩的文件或目录</p>
+<p>​    解压缩：</p>
+<p>​        rar  x    生成的压缩文件名字        压缩的文件或目录</p>
+</li>
+<li><h5 id="zip——"><a href="#zip——" class="headerlink" title="zip——"></a>zip——</h5><p>​    参数：</p>
+<p>​        压缩目录要加参数  -r</p>
+<p>​    压缩：</p>
+<p>​        zip     -r (压缩目录参数)    压缩包的名字（不要指定后缀）  压缩的文件或者目录</p>
+<p>​     解压缩：</p>
+<p>​        unzip   压缩包文件    </p>
+<p>​        unzip   压缩包文件    -d    解压缩到指定目录</p>
+</li>
+<li><h5 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h5><p>​    相同之处：</p>
+<p>​        tar/rar/zip    参数    生成的压缩文件名字    压缩的文件或目录</p>
+<p>​        tar/rar/unzip    参数    生成的压缩文件名字        压缩的文件或者目录</p>
+</li>
+</ul>
+<h3 id="3-进程管理"><a href="#3-进程管理" class="headerlink" title="3.进程管理"></a>3.进程管理</h3><p>只要是一个应用程序启动就有进程</p>
+<p>输入：<code>who</code> 查看当前在线用户情况，一般显示有登陆的用户名、登陆的终端设备、登陆到系统的时间：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hzt      :0           2019-05-30 06:35 (:0)		//：0表示的是图形界面 ，也称tty7</span><br><span class="line">hzt      pts/2        2019-05-30 20:16 (192.168.150.1)</span><br></pre></td></tr></table></figure>
+<p>在linux中有  tty1——tty6表示文字界面（切换ctrl + alt + [f1-f6]），tty7表示图形界面(切换ctrl + alt + [    f7])。之间互不影响。ps:经过测试，发现我的ubuntu 返回图形界面的快捷键是 ctrl alt f1</p>
+<h4 id="进程："><a href="#进程：" class="headerlink" title="进程："></a>进程：</h4><p>ps    aux</p>
+<p>​    参数： a   列出当前所有的用户的进程</p>
+<p>​              u   列出用户自己的进程信息</p>
+<p>​              x   查看没有有终端（没有tty）的应用程序进程</p>
+<p>但是查找到的进程数量太多了，难以查看自己要找的进程，所以就要使用到——<code>管道</code></p>
+<h4 id="管道（-）"><a href="#管道（-）" class="headerlink" title="管道（|）"></a>管道（|）</h4><p>管道就是把一个命令的输入作为另一个命令的输入</p>
+<p><img src="\assets\img\linux管道.jpg" alt="linux管道"></p>
+<p>由上图可见，指令1的输出给了指令2 ，指令2再把输出显示在屏幕上</p>
+<p>由此就可以使用管道并使用grep 命令查找所要的进程</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps aux | grep 查找关键词</span><br></pre></td></tr></table></figure>
+<p>注意：查找出来的进程数如果只有一条，表示没有查询的进程，因为grep命令需要开启一个进程，所以实际进程数等于查询进程数减一；</p>
+<h4 id="kill命令"><a href="#kill命令" class="headerlink" title="kill命令"></a>kill命令</h4><p>作用：杀死进程</p>
+<p>命令：kill -l   查看64个信号</p>
+<p>​         kill  -SIGKILL/-9（查看到的信号，9表示信号数值）  进程的PID</p>
+<h4 id="查看当前进程的环境变量"><a href="#查看当前进程的环境变量" class="headerlink" title="查看当前进程的环境变量"></a>查看当前进程的环境变量</h4><p>env——查看当前进程的所有的环境变量设置        <code>env | grep PATH</code>利用管道查看PTAH</p>
+<p>​    linux 下的环境变量的格式：key = value :value:value:value(每一个环境变量之间用：隔开)</p>
+<p>top——相当于win的任务管理器，</p>
+<h3 id="4-网络管理"><a href="#4-网络管理" class="headerlink" title="4.网络管理"></a>4.网络管理</h3><h4 id="网络相关的命令"><a href="#网络相关的命令" class="headerlink" title="网络相关的命令"></a>网络相关的命令</h4><p>ifconfig:</p>
+<p>​    eth0——代表的是网卡0        硬件地址（ether）：mac地址</p>
+<p>​    lo——回环地址        inet:本地回环地址</p>
+<p>ping :</p>
+<p>​    参数： -c   4    ——回馈四条信息结束</p>
+<p>​            -i   4 ——每隔多少秒回馈</p>
+<p>nslookup:</p>
+<p>​    查看域名的IP</p>
+<h4 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h4><ul>
+<li><em>创建用户</em>：</li>
+</ul>
+<p>​        sudo   adduser   用户名    (不可创建大写字母的用户名)</p>
+<p>​        sudo  -s /bin/bash -g   Robin  -d  /home/bin    -m   Robin</p>
+<p>​        解析：sudo   useradd   -s(使用什么类型的命令解析器)    /bin/bash(使用bash的命令解析器)   -g(用户所属的组)   Robin（指定的组）   -d （指定用户加目录）  /home/Robin  (用户家目录)   -m（如果加目录不存在则创建一个）   Robin    </p>
+<p>​        添加用户组： sudo groupadd   组名            </p>
+<ul>
+<li><p><em>用户删除</em>：</p>
+<p>​        sudo deluser  用户名    （删除之后用户的家目录还在，使用rm -r 删除）</p>
+<p>​        sudo userdel    -r    用户名    （删除干净）</p>
+</li>
+<li><p><em>查看linux系统下的用户，要去到一个存放配置的文件：/etc/passwd</em></p>
+</li>
+<li><p><em>切换用户</em>：su   用户名</p>
+</li>
+<li><p><em>退出用户</em>：exit</p>
+</li>
+<li><p><em>修改其他用户密码</em>：sudo  passwd   用户</p>
+</li>
+<li><p><em>修改当前用户的密码</em>：passwd</p>
+</li>
+<li><p><em>修改root用户密码</em>：sudo  passwd  root</p>
+</li>
+</ul>
+<h3 id="ftp服务器搭建——其实就是服务器软件的使用——推荐-vsftpd"><a href="#ftp服务器搭建——其实就是服务器软件的使用——推荐-vsftpd" class="headerlink" title="ftp服务器搭建——其实就是服务器软件的使用——推荐 vsftpd"></a>ftp服务器搭建——其实就是服务器软件的使用——推荐 vsftpd</h3><p><em>作用：负责文件的上传和下载</em></p>
+<h4 id="1-服务器端"><a href="#1-服务器端" class="headerlink" title="1.服务器端"></a>1.服务器端</h4><ul>
+<li><p>修改配置文件:——如何修改配置文件</p>
+<p>​    配置文件所在目录：/etc/vsftpd.conf</p>
+<p>​    修改： vsftpd.conf</p>
+</li>
+<li><p>重启服务:——什么命令可以重启服务     sudo   service   vsftpd  restart</p>
+</li>
+</ul>
+<h4 id="2-客户端"><a href="#2-客户端" class="headerlink" title="2.客户端"></a>2.客户端</h4><ul>
+<li><p>实名用户登陆</p>
+<p>​    ftp   IP(server):</p>
+<p>​    实名输入用户名（server）：</p>
+<p>​    实名输入密码：nami</p>
+<p>​        </p>
+<p>​    文件的上传：put       文件名（只能上传下载文件，不可操作目录，操作目录可打包压缩）</p>
+<p>​    文件的下载:   get     文件名</p>
+</li>
+<li><p>匿名用户登陆:</p>
+<p>​    ftp serverIP</p>
+<p>​    用户名：anonymous</p>
+<p>​    密码：直接回车跳过</p>
+<p>​    不允许匿名用户在任意目录直接切换，只能在指定的目录范围工作</p>
+<p>​    设定匿名用户的访问目录：更改配置文件，添加：anon_root=/home/目录</p>
+</li>
+<li><p>lftp客户端访问ftp服务器</p>
+<p>​    <em>lftp是一个客户端工具，可以上传下载目录</em></p>
+<p>​        软件安装： sudo apt install lftp</p>
+<p>​        登陆服务器：</p>
+<p>​            匿名：lftp        serverIP</p>
+<p>​            实名：lftp </p>
+<p>​        查看登陆之前的目录：lpwd    </p>
+<p>​        切换登陆之前的目录：lcd</p>
+<p>​        上传文件：put</p>
+<p>​        下载文件：get</p>
+<p>​        上传多个文件：mput   文件1  文件2</p>
+<p>​        下载多个文件：mget</p>
+<p>​        下载整个目录及其子目录：mirror</p>
+<p>​        上传整个目录及其子目录：mirror -R</p>
+</li>
+</ul>
+<h3 id="nfs服务器搭建"><a href="#nfs服务器搭建" class="headerlink" title="nfs服务器搭建"></a>nfs服务器搭建</h3><p><em>网络文件系统，它允许网络中计算机之间通过TCP/IP网络共享资源</em></p>
+<p>安装软件：sudo  apt-get  install nfs-kernel-server</p>
+<h4 id="1-服务器端-1"><a href="#1-服务器端-1" class="headerlink" title="1.服务器端"></a>1.服务器端</h4><ul>
+<li>创建共享目录    mkdir 目录</li>
+<li>修改配置文件      /etc/exports          增加一行  /home/用户/目录       <em> (rw,sync)      (</em>代指IP网段,rw可读可写，数据实时更新内存到磁盘）</li>
+<li>重启服务             sudo service     nfs-kernel-service            restart</li>
+</ul>
+<h4 id="2-客户端-1"><a href="#2-客户端-1" class="headerlink" title="2.客户端"></a>2.客户端</h4><ul>
+<li><p>挂载服务器共享目录</p>
+<p> mount  serviceIP:sharedir    /mnt        (sharedir是共享目录，挂载到mnt下)</p>
+</li>
+</ul>
+<h3 id="ssh服务器"><a href="#ssh服务器" class="headerlink" title="ssh服务器"></a>ssh服务器</h3><ul>
+<li><p>服务器端</p>
+<p>​    安装ssh：sudo apt install ssh</p>
+</li>
+</ul>
+<ul>
+<li><p>客户端</p>
+<p>​    远程登陆：ssh   用户名@IP<br>​    退出登陆：logout</p>
+</li>
+</ul>
+<h3 id="scp命令"><a href="#scp命令" class="headerlink" title="scp命令"></a>scp命令</h3><p>​    scp = super copy   能在不同的主机之间进行拷贝</p>
+<p>​    使用该命令的前提条件：目标主机已经成功安装 openssh-server</p>
+<p>​    使用格式：scp -r  目标用户名@目标IP地址：/目标文件的绝对路径    /保存到本机的绝对路径（参数 -r 是拷贝目录）</p>
+<p>参考：黑马程序员 <a href="https://www.bilibili.com/video/av33660709/?p=43&gt;" target="_blank" rel="noopener">https://www.bilibili.com/video/av33660709/?p=43&gt;</a></p>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/06/07/嵌入式开发中的C语言关键字.html#more">阅读更多</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/linux/">linux</a>
                 </div>
             </div>
         </div>
         
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
         
     </div>
 </div>
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wechatpay.jpg" alt="微信"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/01/Linux基本教程（三）.html">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Linux基本教程（三）</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/05/30/Linux基本教程（一）.html">
+                <span class="level-item">Linux基本教程（一）</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: true,
+        verify: false,
+        app_id: 'NXFUbBGEhbCBH8V94r8uOxpX-gzGzoHsz',
+        app_key: 'cBEVo6qylQrXl34Ks162qXe4',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+    });
+</script>
+
+    </div>
+</div>
 
 </div>
                 
@@ -237,7 +483,7 @@
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+<div class="column is-4-tablet is-3-desktop is-3-widescreen  has-order-1 column-left is-sticky">
     
         
 <div class="card widget">
@@ -362,17 +608,10 @@
 
     
     
-</div>
-
-                
-                
-
-
-
-
-<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
     
+        <div class="column-right-shadow  ">
         
+            
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
@@ -492,8 +731,8 @@
     </div>
 </div>
 
-    
-        <div class="card widget">
+        
+            <div class="card widget">
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
@@ -617,8 +856,8 @@
 </div>
 
 
-    
         
+            
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
@@ -628,6 +867,8 @@
     </div>
 </div>
 
+        
+        </div>
     
     
 </div>
@@ -642,7 +883,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="https://cdn.jsdelivr.net/gh/hztjiayou/img@master/panda.png" alt="ztao&#39;s Blog" height="28">
+                    <img src="https://cdn.jsdelivr.net/gh/hztjiayou/img@master/panda.png" alt="Linux基本教程（二）" height="28">
                 
                 </a>
                 <p class="is-size-7">

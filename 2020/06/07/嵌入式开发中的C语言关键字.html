@@ -2,13 +2,13 @@
 <html  lang="zh">
 <head>
     <meta charset="utf-8">
-<title>分类: C语言 - ztao&#39;s Blog</title>
+<title>嵌入式开发中的C语言关键字 - ztao&#39;s Blog</title>
 <meta charset="utf-8" />
 
 <meta name="generator" content="Hexo 3.9.0" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>分类: C语言 - ztao&#39;s Blog</title>
+<title>嵌入式开发中的C语言关键字 - ztao&#39;s Blog</title>
 
 <meta name="google-site-verification" content="67z1CXZ8AOhImIglgTwqAlneRCHTO6xRJo5NeafDAqw" />
 <script>
@@ -26,18 +26,22 @@
 })();
 </script>
 
-    <meta name="keywords" content="EE,嵌入式,集成电路">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ztao&#39;s Blog">
-<meta property="og:url" content="https://ztHwang.github.io/categories/C语言/index.html">
+    <meta name="description" content="写在前面 本文归纳总结了在嵌入式软件开发过程中常使用到的几个C语言关键字，比如：volatile、const、static等。">
+<meta name="keywords" content="categories-java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="嵌入式开发中的C语言关键字">
+<meta property="og:url" content="https://ztHwang.github.io/2020/06/07/嵌入式开发中的C语言关键字.html">
 <meta property="og:site_name" content="ztao&#39;s Blog">
+<meta property="og:description" content="写在前面 本文归纳总结了在嵌入式软件开发过程中常使用到的几个C语言关键字，比如：volatile、const、static等。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2023-03-04T09:22:53.715Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ztao&#39;s Blog">
+<meta name="twitter:title" content="嵌入式开发中的C语言关键字">
+<meta name="twitter:description" content="写在前面 本文归纳总结了在嵌入式软件开发过程中常使用到的几个C语言关键字，比如：volatile、const、static等。">
 
 
 
-<link rel="alternative" href="/atom.xml" title="ztao&#39;s Blog" type="application/atom+xml">
+<link rel="alternative" href="/atom.xml" title="嵌入式开发中的C语言关键字" type="application/atom+xml">
 
 
 
@@ -107,13 +111,13 @@
 <link rel="stylesheet" href="/live2d/waifu.css">
     <!-- <meta name="referrer" content="no-referrer" /> 解决图片过期问题-->
 </head>
-<body class="is-3-column">
+<body class="is-2-column">
     <nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="https://cdn.jsdelivr.net/gh/hztjiayou/img@master/panda.png" alt="ztao&#39;s Blog" height="28">
+                <img src="https://cdn.jsdelivr.net/gh/hztjiayou/img@master/panda.png" alt="嵌入式开发中的C语言关键字" height="28">
             
             </a>
         </div>
@@ -150,6 +154,10 @@
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -163,20 +171,7 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/categories">分类</a></li>
-            
-            <li class="is-active"><a href="#" aria-current="page">C语言</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-
-    <div class="card">
+                <div class="column is-8-tablet is-9-desktop is-9-widescreen has-order-2 column-main"><div class="card">
     
     <div class="card-content article ">
         
@@ -197,39 +192,156 @@
                 </span>
                 
                 
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    1<span id="busuanzi_value_page_pv"></span> 次查看
+                </span>
+                
             </div>
         </div>
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/06/07/嵌入式开发中的C语言关键字.html">嵌入式开发中的C语言关键字</a>
+                嵌入式开发中的C语言关键字
             
         </h1>
         <div class="content">
             <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><blockquote>
-<p>本文归纳总结了在嵌入式软件开发过程中常使用到的几个C语言关键字，比如：volatile、const、static等。</p></blockquote>
+<p>本文归纳总结了在嵌入式软件开发过程中常使用到的几个C语言关键字，比如：volatile、const、static等。</p>
+<a id="more"></a>
+</blockquote>
+<h3 id="1-volatile"><a href="#1-volatile" class="headerlink" title="1. volatile"></a>1. volatile</h3><p>这个关键字可以说是区分C程序员和嵌入式程序员最基本的问题，因为volatile常被使用在操作芯片的内存。</p>
+<p><strong>volatile关键字用于声明那些可能会有意想不到的改变的变量</strong>，这个变量可能会被意想不到的改变。由于访问寄存器中数据比访问内存中的数据速度快，因此编译器一般会优化而减少访问内存，如果变量改变则数据会出错，所以使用volatile声明变量，则编译器每次都重新从内存读取变量数据，而不是使用保存在寄存器里的备份。总的来说，我们不能确保寄存器中的数据一定不会改变，则需要使用volatile。</p>
+<p>从如下的例子中来看：</p>
+<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> rURXH0 (*(volatile unsigned char *)0x50000024) <span class="hljs-comment">//UART 0 Receive buffer</span></span></span><br></pre></td></tr></table></figure>
+<p>0x50000024是地址，如果没有将这个地址强行转换位volatile，那么我们在使用rURXH0时，可能直接从CPU的寄存器中读取数据。因为之前rURXH0被访问过，之前从内存中取出的rURXH0的值被保存在某个寄存器中，由于编译器优化的结果，会直接从寄存器中读取rURXH0的值，不去内存读取。使用volatile进行强行转换之后，执行结构每次读取数据都会去内存中读取而不是去寄存器中读取。</p>
+<p>总的来说，volatile关键字降低编译器的优化度，但是确保了程序的正确性。被volatile修饰的代码，编译器不对其进行优化，从而提供稳定的访问。对于volatile修饰的变量每次都是重新从内存读取数据，而不是从寄存器读取数据，相当于不进行优化。</p>
+<h3 id="2-static"><a href="#2-static" class="headerlink" title="2. static"></a>2. static</h3><ol>
+<li>限制函数在只能在本文件中使用，对其他源文件隐藏。</li>
+<li>修饰的变量只进行一次初始化。</li>
+<li>默认初始化为0，因为在静态数据区内存中所有字节默认为0x00。比如要把一个字符数组当成字符串来用，但是又觉得每次在字符数组末尾加\0太麻烦，可以把字符数组定义成静态的，就省去了麻烦，因为那里本来就是\0。如：<code>static char str[10];</code></li>
+</ol>
+<h3 id="3-const"><a href="#3-const" class="headerlink" title="3. const"></a>3. const</h3><p>用来定义只读变量，被const定义的变量它的值是不允许改变的，意味着必须在定义的时候给它赋初值。可以写成：</p>
+<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> Max; </span><br><span class="line"><span class="hljs-comment">//或者</span></span><br><span class="line"><span class="hljs-keyword">int</span> <span class="hljs-keyword">const</span> Max;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><strong>const与指针</strong></li>
+</ol>
+<p>const与指针配合使用有两种作用，一是限制指针变量，二是限制指针变量指向的数据。</p>
+<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">int</span> * <span class="hljs-keyword">const</span> p2;	<span class="hljs-comment">//const修饰的是指针变量</span></span><br><span class="line"><span class="hljs-comment">/*</span></span><br><span class="line"><span class="hljs-comment">* 也就是指针变量本身的值不能修改，所以被const修饰的指针变量只能在定义的时候初始化，不能</span></span><br><span class="line"><span class="hljs-comment">* 定义之后再赋值。如错误如下</span></span><br><span class="line"><span class="hljs-comment">*/</span></span><br><span class="line"><span class="hljs-comment">/*******错误演示******/</span></span><br><span class="line"><span class="hljs-keyword">int</span> * <span class="hljs-keyword">const</span> p2;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-keyword">int</span> num[] = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>&#125;;</span><br><span class="line">    p2 = num;	<span class="hljs-comment">//错误，表达式必须是可以修改的左值，p2不可修改</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-comment">//下面两种方法都是可以的</span></span><br><span class="line"><span class="hljs-keyword">int</span> <span class="hljs-keyword">const</span> *p1;</span><br><span class="line"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> *p1;</span><br><span class="line"><span class="hljs-comment">/*</span></span><br><span class="line"><span class="hljs-comment">* 限制指针变量指向的数据的意思是指针可以指向不同的变量，但是不能修改指针指向数据的值，如：</span></span><br><span class="line"><span class="hljs-comment">*/</span></span><br><span class="line"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> *p1;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> num = <span class="hljs-number">5</span>;</span><br><span class="line">    p1 = &amp;num;</span><br><span class="line">    (*p1)++;	<span class="hljs-comment">//错误操作，（*p1）不可修改</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>const也可以同时限制指针变量和指针变量指向的数据的值，如：<code>const int * const p2;</code></p>
+<p>这种写法使得指针变量和指针变量指向的值都不能修改。</p>
+<ol start="2">
+<li><strong>const和函数形参</strong></li>
+</ol>
+<p>const常用在函数形参中，在C标准库中很多函数形参用const限制，防止在函数内部修改指针指向的数据。</p>
+<ol start="3">
+<li><strong>const和非const类型的转换</strong></li>
+</ol>
+<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> *p1;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> *p2;</span><br><span class="line">    p2 = p1;	<span class="hljs-comment">//错误，不能将const int *类型的值赋给 int *类型的值</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-comment">//也就是说 const int * 和 int * 是不同的类型，不能将const int *类型的数据赋值给 int *</span></span><br><span class="line"><span class="hljs-comment">//类型的数据。可以理解为提升权限是不行的，但是降低权限是可以的。如：</span></span><br><span class="line"><span class="hljs-keyword">int</span> *p1;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">	<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> *p2;</span><br><span class="line">    p2 = p1;	<span class="hljs-comment">//合法操作，相当于降低权限</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li><strong>const 和define</strong></li>
+</ol>
+<ul>
+<li>const是普通变量定义，define是预编译指令，且处理阶段不一样，define在预处理阶段，const在编译运行阶段。</li>
+<li>const定义的是变量，define定义的是常量。define定义的在编译之后就不存在了，不占用内存，因为它不是变量，系统只会给变量分配内存。但是const本质是一个变量。</li>
+<li>const定义的对象有数据类型，而define定义的对象没有数据类型，所以编译器可以对前者进行类型安全检查，对后者就是机械的字符替换。</li>
+</ul>
+<p>注意：如果定义数组的最大长度就不能用const了，因为它是一个变量，就应该用define。如：</p>
+<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> MAX = <span class="hljs-number">100</span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> <span class="hljs-built_in">map</span>[MAX];	<span class="hljs-comment">//错误操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-ifndef-amp-define-amp-endif"><a href="#4-ifndef-amp-define-amp-endif" class="headerlink" title="4. ifndef &amp; define &amp; endif"></a>4. ifndef &amp; define &amp; endif</h3><p>在头文件中，通常使用如下格式，目的是<strong>防止头文件的重复包含和编译。</strong></p>
+<h3 id="5-extern"><a href="#5-extern" class="headerlink" title="5. extern"></a>5. extern</h3><p>用外部文件定义的变量。</p>
+<h3 id="6-typedef"><a href="#6-typedef" class="headerlink" title="6. typedef"></a>6. typedef</h3><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/*从typedef的名字可以看出，是类型重定义，即重定义 类型 */</span></span><br><span class="line"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">int</span> A;     <span class="hljs-comment">//用A代替int</span></span><br><span class="line"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">int</span> *B;</span><br><span class="line"><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">lcd_operation</span> <span class="hljs-title">C</span>;</span></span><br><span class="line"><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">lcd_operation</span> * <span class="hljs-title">D</span>;</span>		<span class="hljs-comment">//这里使用D替代类型 struct lcd *</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">int</span> <span class="hljs-params">(*add_type)</span><span class="hljs-params">(<span class="hljs-keyword">int</span>, <span class="hljs-keyword">int</span>)</span></span>;		</span><br><span class="line"><span class="hljs-comment">/*使用函数指针初始化函数*/</span></span><br><span class="line">add_type f1;</span><br><span class="line">add_type f2;</span><br></pre></td></tr></table></figure>
+<p>更多typedef使用可以参考：<a href="https://www.cnblogs.com/rainbow70626/p/8647735.html" target="_blank" rel="noopener">C中typedef 函数指针的使用</a></p>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/06/07/嵌入式开发中的C语言关键字.html#more">阅读更多</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/C语言/">C语言</a>
                 </div>
             </div>
         </div>
         
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
         
     </div>
 </div>
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/wechatpay.jpg" alt="微信"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/05/23/AltiumDesigner-KeyShot渲染3D-PCB动画-图片.html">
+                <span class="level-item">AltiumDesigner+KeyShot渲染3D PCB动画/图片</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: true,
+        verify: false,
+        app_id: 'NXFUbBGEhbCBH8V94r8uOxpX-gzGzoHsz',
+        app_key: 'cBEVo6qylQrXl34Ks162qXe4',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+    });
+</script>
+
+    </div>
+</div>
 
 </div>
                 
@@ -237,7 +349,7 @@
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+<div class="column is-4-tablet is-3-desktop is-3-widescreen  has-order-1 column-left is-sticky">
     
         
 <div class="card widget">
@@ -309,6 +421,45 @@
 </div>
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#写在前面">
+        <span class="has-mr-6">1</span>
+        <span>写在前面</span>
+        </a></li><li>
+        <a class="is-flex" href="#1-volatile">
+        <span class="has-mr-6">2</span>
+        <span>1. volatile</span>
+        </a></li><li>
+        <a class="is-flex" href="#2-static">
+        <span class="has-mr-6">3</span>
+        <span>2. static</span>
+        </a></li><li>
+        <a class="is-flex" href="#3-const">
+        <span class="has-mr-6">4</span>
+        <span>3. const</span>
+        </a></li><li>
+        <a class="is-flex" href="#4-ifndef-amp-define-amp-endif">
+        <span class="has-mr-6">5</span>
+        <span>4. ifndef &amp; define &amp; endif</span>
+        </a></li><li>
+        <a class="is-flex" href="#5-extern">
+        <span class="has-mr-6">6</span>
+        <span>5. extern</span>
+        </a></li><li>
+        <a class="is-flex" href="#6-typedef">
+        <span class="has-mr-6">7</span>
+        <span>6. typedef</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 
@@ -362,17 +513,10 @@
 
     
     
-</div>
-
-                
-                
-
-
-
-
-<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
     
+        <div class="column-right-shadow  ">
         
+            
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
@@ -492,8 +636,8 @@
     </div>
 </div>
 
-    
-        <div class="card widget">
+        
+            <div class="card widget">
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
@@ -617,8 +761,8 @@
 </div>
 
 
-    
         
+            
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
@@ -628,6 +772,8 @@
     </div>
 </div>
 
+        
+        </div>
     
     
 </div>
@@ -642,7 +788,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="https://cdn.jsdelivr.net/gh/hztjiayou/img@master/panda.png" alt="ztao&#39;s Blog" height="28">
+                    <img src="https://cdn.jsdelivr.net/gh/hztjiayou/img@master/panda.png" alt="嵌入式开发中的C语言关键字" height="28">
                 
                 </a>
                 <p class="is-size-7">
